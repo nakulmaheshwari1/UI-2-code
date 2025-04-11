@@ -168,3 +168,65 @@ body {
     text-align: center;
     background-color: black;
 }
+
+.try-3d-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.try-3d-model-box {
+    width: 100%;
+    max-width: 1180px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.try-3d-description {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #bbb;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.about-container {
+    color: #bbb;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+}
+
+.about-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.underline {
+    width: 60px;
+    height: 2px;
+    background-color: red;
+    margin: 0 auto 20px auto;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about-text strong {
+    font-weight: bold;
+}
