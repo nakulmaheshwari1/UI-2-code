@@ -209,8 +209,8 @@ body {
     max-width: 700px;
     text-align: center;
     position: relative;
+    margin: 0 auto; /* centers it horizontally */
 }
-
 .about-title {
     font-size: 24px;
     font-weight: bold;
