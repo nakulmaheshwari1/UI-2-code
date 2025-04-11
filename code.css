@@ -378,3 +378,52 @@ body {
         font-size: 0.8rem;
     }
 }
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .strip-box {
+        width: 80%;
+        height: auto;
+    }
+
+    .center-nav ul {
+        padding: 15px 30px;
+        gap: 25px;
+    }
+
+    .card-container,
+    .articles {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 250px;
+        height: 300px;
+    }
+
+    .try-3d-model-box {
+        height: 400px;
+    }
+
+    .about-container {
+        max-width: 90%;
+    }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1025px) {
+    .strip-box {
+        width: 325px;
+        height: 812px;
+    }
+
+    .card {
+        width: 300px;
+        height: 350px;
+    }
+
+    .try-3d-model-box {
+        height: 600px;
+    }
+}
