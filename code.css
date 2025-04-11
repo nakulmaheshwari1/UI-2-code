@@ -53,6 +53,7 @@ body {
 .strip-box:nth-child(odd) {
     transform: translateY(-30px);
 }
+
 .center-nav {
     display: flex;
     justify-content: center;
@@ -206,6 +207,8 @@ body {
     max-width: 700px;
     text-align: center;
     position: relative;
+    margin: 0 auto;
+    /* centers it horizontally */
 }
 
 .about-title {
@@ -229,4 +232,149 @@ body {
 
 .about-text strong {
     font-weight: bold;
+}
+
+.section-title {
+    margin-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #bbb;
+    font-size: 20px;
+}
+
+.underline {
+    width: 60px;
+    height: 2px;
+    background-color: red;
+    margin: 10px auto 30px auto;
+}
+
+.articles {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: 2px solid #555;
+    border-radius: 10px;
+    width: 200px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 0 10px #ff0000aa;
+}
+
+.card:hover {
+    border-color: red;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+.footer {
+    padding: 2rem;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.language {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.circle-logo {
+    margin: 1rem auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transform: rotate(-20deg);
+}
+
+.top-arrow {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+
+    .no_1,
+    .no_2 {
+        height: 8vh;
+    }
+
+    .P1 {
+        font-size: 1.2rem;
+    }
+
+    .strip-box {
+        width: 90%;
+        height: auto;
+    }
+
+    .center-nav ul {
+        flex-direction: column;
+        padding: 10px 20px;
+        gap: 20px;
+    }
+
+    .card-container,
+    .articles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+        font-size: 14px;
+    }
+
+    .try-3d-model-box {
+        height: 300px;
+        padding: 10px;
+    }
+
+    .about-container {
+        padding: 20px;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle-logo {
+        width: 80px;
+        height: 80px;
+        font-size: 0.8rem;
+    }
 }
