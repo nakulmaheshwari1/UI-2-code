@@ -29,6 +29,64 @@ body {
     top: 10vh;
 }
 
+.search-bar {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 100%;
+    background: transparent;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.search-input::placeholder {
+    text-align: center;
+}
+
+.search-icon {
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    color: gray;
+}
+
+.bag-icon {
+    position: relative;
+    font-size: 22px;
+    color: gray;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.bag-icon:hover {
+    color: black;
+}
+
+
+.profile-icon {
+    font-size: 24px;
+    color: gray;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.profile-icon:hover {
+    color: black;
+}
+
 .box-strip {
     margin-top: 20vh;
     display: flex;
