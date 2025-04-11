@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+}
+.no_1{
+    padding: 0;
+    margin: 0;
+    background-color: red;
+    width: 100vw;
+    height: 10vh;
+    position: absolute;
+    top: 0;
+}
