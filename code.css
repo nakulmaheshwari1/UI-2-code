@@ -1,7 +1,8 @@
-body{
+body {
     background-color: black;
 }
-.no_1{
+
+.no_1 {
     padding: 0;
     margin: 0;
     background-color: red;
@@ -10,18 +11,54 @@ body{
     position: absolute;
     top: 0;
 }
-.P1{
+
+.P1 {
     color: white;
     font-size: 2rem;
     text-align: center;
-    
+
 }
-.no_2{
+
+.no_2 {
     padding: 0;
     margin: 0;
-    background-color:#F18080;
+    background-color: #F18080;
     width: 100vw;
     height: 5vh;
     position: absolute;
     top: 10vh;
+}
+
+.box-strip {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.strip-box1 {
+    width: 325px;
+    height: 812px;
+    top: 368px;
+    background-color: #2e2e2e;
+    border-radius: 6px;
+    transition: transform 0.3s;
+}
+
+.strip-box2 {
+    width: 325px;
+    height: 812px;
+    top: 368px;
+    background-color: #2e2e2e;
+    border-radius: 6px;
+    transition: transform 0.3s;
+}
+
+.strip-box:hover {
+    transform: scaleY(1.05);
+    background-color: #444;
+}
+
+.strip-box:nth-child(odd) {
+    transform: translateY(-20px);
 }
