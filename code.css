@@ -36,16 +36,7 @@ body {
     gap: 20px;
 }
 
-.strip-box1 {
-    width: 325px;
-    height: 812px;
-    top: 368px;
-    background-color: #2e2e2e;
-    border-radius: 6px;
-    transition: transform 0.3s;
-}
-
-.strip-box2 {
+.strip-box {
     width: 325px;
     height: 812px;
     top: 368px;
@@ -60,5 +51,120 @@ body {
 }
 
 .strip-box:nth-child(odd) {
-    transform: translateY(-20px);
+    transform: translateY(-30px);
+}
+.center-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    background-color: transparent;
+}
+
+.center-nav ul {
+    display: flex;
+    background-color: #a00000;
+    /* deep red */
+    border: 2px solid white;
+    list-style: none;
+    padding: 20px 40px;
+    gap: 40px;
+}
+
+.center-nav li {
+    color: white;
+    font-weight: bold;
+    position: relative;
+    padding: 0 20px;
+}
+
+
+.center-nav li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: white;
+}
+
+/* COLLECTION SECTION */
+.collection-section {
+    margin-top: 80px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.collection-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    border-bottom: 3px solid red;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #2e2e2e;
+    border: 2px solid red;
+    border-radius: 25px;
+    padding: 20px;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.model {
+    font-weight: 600;
+}
+
+.price {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 6px 14px;
+    border-radius: 10px;
+}
+
+.select-btn {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.select-btn:hover {
+    background-color: #ff1a1a;
+}
+
+.try-3d-section {
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+    background-color: black;
 }
