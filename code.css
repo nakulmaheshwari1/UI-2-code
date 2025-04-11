@@ -29,64 +29,6 @@ body {
     top: 10vh;
 }
 
-.search-bar {
-    position: relative;
-    width: 300px;
-    height: 50px;
-    background-color: white;
-    border-radius: 30px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    margin: auto;
-}
-
-.search-input {
-    border: none;
-    outline: none;
-    font-weight: bold;
-    font-size: 1rem;
-    width: 100%;
-    background: transparent;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.search-input::placeholder {
-    text-align: center;
-}
-
-.search-icon {
-    position: absolute;
-    right: 20px;
-    font-size: 20px;
-    color: gray;
-}
-
-.bag-icon {
-    position: relative;
-    font-size: 22px;
-    color: gray;
-    margin: 0 10px;
-    cursor: pointer;
-}
-
-.bag-icon:hover {
-    color: black;
-}
-
-
-.profile-icon {
-    font-size: 24px;
-    color: gray;
-    margin: 0 10px;
-    cursor: pointer;
-}
-
-.profile-icon:hover {
-    color: black;
-}
-
 .box-strip {
     margin-top: 20vh;
     display: flex;
@@ -98,6 +40,7 @@ body {
     width: 325px;
     height: 812px;
     top: 368px;
+
     background-color: #2e2e2e;
     border-radius: 6px;
     transition: transform 0.3s;
@@ -109,7 +52,8 @@ body {
 }
 
 .strip-box:nth-child(odd) {
-    transform: translateY(-30px);
+    transform: translateY(-20px);
+    /* Move up */
 }
 
 .center-nav {
@@ -265,8 +209,6 @@ body {
     max-width: 700px;
     text-align: center;
     position: relative;
-    margin: 0 auto;
-    /* centers it horizontally */
 }
 
 .about-title {
@@ -379,62 +321,6 @@ body {
     margin-top: 1rem;
     font-size: 0.9rem;
     font-weight: bold;
-}
-
-
-@media (max-width: 600px) {
-
-    .no_1,
-    .no_2 {
-        height: 8vh;
-    }
-
-    .P1 {
-        font-size: 1.2rem;
-    }
-
-    .strip-box {
-        width: 90%;
-        height: auto;
-    }
-
-    .center-nav ul {
-        flex-direction: column;
-        padding: 10px 20px;
-        gap: 20px;
-    }
-
-    .card-container,
-    .articles {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-        height: auto;
-        font-size: 14px;
-    }
-
-    .try-3d-model-box {
-        height: 300px;
-        padding: 10px;
-    }
-
-    .about-container {
-        padding: 20px;
-    }
-
-    .footer-menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .circle-logo {
-        width: 80px;
-        height: 80px;
-        font-size: 0.8rem;
-    }
 }
 
 /* Medium devices (tablets) */
