@@ -133,7 +133,15 @@
         </div>
         <div class="language">ENGLISH | DEUTSCH</div>
         <div class="circle-logo">MATTEL</div>
-        <div class="top-arrow">↑<br>TOP</div>
+        <div class="top-arrow" onclick="scrollToTop()">↑<br>TOP</div>
     </div>
+    <script>
+        function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+    </script>
 </body>
 </body>
