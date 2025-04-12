@@ -1,5 +1,14 @@
+@font-face {
+    font-family: 'Light Sport DEMO';
+    src: url('fonts/LightSportDEMO.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-color: black;
+    font-family: 'Light Sport DEMO', sans-serif;
+    font-size: x-large;
 }
 
 .no_1 {
@@ -8,8 +17,16 @@ body {
     background-color: red;
     width: 100vw;
     height: 10vh;
+    display: flex;
     position: absolute;
+    align-items: center;
+    justify-content: center;
     top: 0;
+}
+
+.no_1 img {
+    height: 100px;
+    width: auto;
 }
 
 .P1 {
@@ -27,33 +44,43 @@ body {
     height: 5vh;
     position: absolute;
     top: 10vh;
+    margin-bottom: 20px;
 }
 
 .box-strip {
     margin-top: 20vh;
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 20px;
 }
 
 .strip-box {
-    width: 325px;
-    height: 812px;
-    top: 368px;
-
+    width: 200px;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
     background-color: #2e2e2e;
-    border-radius: 6px;
-    transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.strip-image {
+    width: 700px;
+    position: absolute;
+    top: 250px;
 }
 
 .strip-box:hover {
-    transform: scaleY(1.05);
-    background-color: #444;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .strip-box:nth-child(odd) {
-    transform: translateY(-20px);
-    /* Move up */
+    transform: translateY(-30px);
 }
 
 .center-nav {
@@ -62,6 +89,7 @@ body {
     align-items: center;
     margin-top: 40px;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .center-nav ul {
@@ -80,7 +108,6 @@ body {
     position: relative;
     padding: 0 20px;
 }
-
 
 .center-nav li:not(:last-child)::after {
     content: '';
@@ -116,12 +143,27 @@ body {
     flex-wrap: wrap;
 }
 
+.card-container .card img{
+    width: 100%; /* Ensure the image takes up the full width of the card */
+    height: 400px; /* Increase the height of the image */
+    object-fit: contain; /* Ensure the image scales properly without distortion */
+    border-radius: 10px; /* Keep the rounded corners */
+    margin-bottom: 15px;
+}
+
+.additional-images-row img{
+    width: 32%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+
 .card {
     background-color: #2e2e2e;
     border: 2px solid red;
     border-radius: 25px;
     padding: 20px;
-    width: 300px;
+    width: 45%px;
     height: 350px;
     display: flex;
     flex-direction: column;
@@ -202,6 +244,7 @@ body {
 }
 
 .about-container {
+    display: flex;
     color: #bbb;
     border: 2px solid red;
     border-radius: 10px;
@@ -209,8 +252,11 @@ body {
     max-width: 700px;
     text-align: center;
     position: relative;
-    margin: 0 auto; /* centers it horizontally */
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
 }
+
 .about-title {
     font-size: 24px;
     font-weight: bold;
@@ -257,21 +303,114 @@ body {
     justify-content: center;
 }
 
-.card {
-    background-color: #1a1a1a;
-    border: 2px solid #555;
-    border-radius: 10px;
-    width: 200px;
-    height: 280px;
+.additional-images{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+
+.additional-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.articles .card img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.articles .card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+    width: 30%;
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    margin: 20px;
+}
+
+.card img.card-image {
+    width: 100%;
+    height: 700px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+.card-content {
+    padding: 15px;
     text-align: center;
-    padding: 20px;
+}
+
+.card-content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.car-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.model {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.price {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 6px 14px;
+    border-radius: 10px;
+}
+
+.select-btn {
+    background-color: red;
     color: white;
     font-weight: bold;
-    font-size: 16px;
-    box-shadow: 0 0 10px #ff0000aa;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    /* Add spacing above the button */
+    align-self: center;
+    /* Ensure the button stays centered */
+}
+
+.select-btn:hover {
+    background-color: #ff1a1a;
 }
 
 .card:hover {
@@ -323,6 +462,62 @@ body {
     font-weight: bold;
 }
 
+
+@media (max-width: 600px) {
+
+    .no_1,
+    .no_2 {
+        height: 8vh;
+    }
+
+    .P1 {
+        font-size: 1.2rem;
+    }
+
+    .strip-box {
+        width: 90%;
+        height: auto;
+    }
+
+    .center-nav ul {
+        flex-direction: column;
+        padding: 10px 20px;
+        gap: 20px;
+    }
+
+    .card-container,
+    .articles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+        font-size: 14px;
+    }
+
+    .try-3d-model-box {
+        height: 300px;
+        padding: 10px;
+    }
+
+    .about-container {
+        padding: 20px;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle-logo {
+        width: 80px;
+        height: 80px;
+        font-size: 0.8rem;
+    }
+}
+
 /* Medium devices (tablets) */
 @media (min-width: 601px) and (max-width: 1024px) {
     .strip-box {
@@ -370,4 +565,117 @@ body {
     .try-3d-model-box {
         height: 600px;
     }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    padding: 0 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.search-container {
+    position: relative;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.search-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 8px 2px 8px 14px;
+    height: 10px;
+    border-radius: 20px;
+    border: 1.2px solid #ccc;
+    outline: none;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 14px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.search-bar::placeholder {
+    color: #aaa;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    pointer-events: none;
+}
+
+.right-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+}
+
+.search-bar:hover,
+.search-bar:focus {
+    background-color: #fff;
+    border-color: #3a86ff;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.try-3d-model-box {
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+
+#open3DButton {
+    position: absolute;
+    z-index: 10;
+    padding: 10px 20px;
+    top: 20px;
+    left: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.try-3d-model-box img{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
